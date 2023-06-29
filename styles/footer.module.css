@@ -1,0 +1,30 @@
+.item{
+    flex: 1;
+    position: relative;
+    display: flex;
+}
+.item:last-child{
+    flex: 1.5;
+    padding: 50px;
+    justify-content: space-between;
+}
+.card{
+    flex: 1;
+    padding: 0 20px;
+}
+.text{
+    color: lightgray;
+}
+@media (max-width: 768px) {
+    .item:first-child{
+        display: none;
+    }
+    .item:last-child{
+        flex-direction: column;
+        padding: 10px;
+    }
+    .card{
+        padding: 10px 0;
+        text-align: center;
+    }
+}

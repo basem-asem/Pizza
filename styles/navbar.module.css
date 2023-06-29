@@ -1,0 +1,25 @@
+.item{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.item:nth-child(2){
+    flex: 3;
+}
+.listItem {
+    margin: 20px;
+    font-weight: 500;
+}
+@media (max-width:768px) {
+    .item:nth-child(2){
+        display: none;
+    }
+    .item:nth-child(1){
+        flex: 3;
+    }
+}
+@media (min-width:769px) {
+    .listItem {
+        margin: 10px;
+    }
+}
