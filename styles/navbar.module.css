@@ -9,6 +9,7 @@
 .listItem {
     margin: 20px;
     font-weight: 500;
+    cursor: pointer;
 }
 @media (max-width:768px) {
     .item:nth-child(2){

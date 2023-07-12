@@ -67,6 +67,9 @@
     background-color: teal;
     font-size: small
 }
+.selected{
+    background-color: #d1411e;
+}
 .ingredients{
     display: flex;
     margin-bottom: 30px;
