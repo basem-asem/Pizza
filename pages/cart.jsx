@@ -1,4 +1,4 @@
-import styles from "../styles/Cart.module.css";
+import styles from "../styles/cart.module.css";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -48,7 +48,7 @@ const Cart = () => {
           currency: currency,
         },
       });
-    }, [currency, showSpinner]);
+    }, [currency, showSpinner, dispatch, options]);
 
     return (
       <>
