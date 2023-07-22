@@ -13,7 +13,6 @@ export default function Home({pizzaList, admin}) {
       <Head>
         <title>Pizza Restaurant in Alexandria</title>
         <meta name="description" content="Best pizza shop in town" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
       {admin && <AddButton setClose={setClose}/>}
