@@ -17,8 +17,11 @@ const Add = ({setClose}) => {
     const handleExtraInput = (e)=>{
         setExtra({...extra, [e.target.name]: e.target.value});
     }
-    const handleExtra = (e)=>{
-        setExtraOptions((prev) => [...prev, extra])
+    let extraOptionIdCounter = 0; // Counter for generating unique ids for extra options
+    const handleExtra = () => {
+      const newExtraOption = { ...extra, id: extraOptionIdCounter++ };
+      setExtraOptions((prev) => [...prev, newExtraOption]);
+      setExtra(null); // Reset the extra input fields after adding the extra option
     };
     const handleDelete = (id)=>{
         setExtraOptions((prevOptions) => prevOptions.filter((option) => option.id !== id));
@@ -69,8 +72,10 @@ const Add = ({setClose}) => {
                     <label className={styles.label}>Extra</label>
                     <div className={styles.extra}>
                     <input className={`${styles.input} ${styles.inputLg}`} type="text" placeholder='item' name='text' onChange={handleExtraInput}/>
+
                     <input className={`${styles.input} ${styles.inputLg}`} type="number" placeholder='price' name='price' onChange={handleExtraInput}/>
-                    <button className={styles.extraButton}onClick={handleExtra}>Add</button>
+
+                    <button className={styles.extraButton} onClick={handleExtra}>Add</button>
                     </div>
                     <div className={styles.extraItems}>
                         {extraOptions.map(option=>(<span key={option.id} className={styles.extraItem} onClick={() =>handleDelete(option.id)}>{option.text}</span>))}
