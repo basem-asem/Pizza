@@ -17,11 +17,8 @@ const Add = ({setClose}) => {
     const handleExtraInput = (e)=>{
         setExtra({...extra, [e.target.name]: e.target.value});
     }
-    let extraOptionIdCounter = 0; // Counter for generating unique ids for extra options
-    const handleExtra = () => {
-      const newExtraOption = { ...extra, id: extraOptionIdCounter++ };
-      setExtraOptions((prev) => [...prev, newExtraOption]);
-      setExtra(null); // Reset the extra input fields after adding the extra option
+    const handleExtra = ()=>{
+        setExtraOptions((prev) => [...prev, extra])
     };
     const handleDelete = (id)=>{
         setExtraOptions((prevOptions) => prevOptions.filter((option) => option.id !== id));
