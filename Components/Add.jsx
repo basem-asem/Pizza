@@ -20,7 +20,7 @@ const Add = ({setClose}) => {
     const handleExtra = (e)=>{
         setExtraOptions((prev) => [...prev, extra])
     };
-    const hanndleDelete = (e)=>{
+    const handleDelete = (id)=>{
         setExtraOptions((prevOptions) => prevOptions.filter((option) => option.id !== id));
     }
     // upload image to cloud storage called cloudinary
@@ -73,7 +73,7 @@ const Add = ({setClose}) => {
                     <button className={styles.extraButton}onClick={handleExtra}>Add</button>
                     </div>
                     <div className={styles.extraItems}>
-                        {extraOptions.map(option=>(<span key={option.id} className={styles.extraItem} onClick={()=>hanndleDelete(option.id)}>{option.text}</span>))}
+                        {extraOptions.map(option=>(<span key={option.id} className={styles.extraItem} onClick={() =>handleDelete(option.id)}>{option.text}</span>))}
                     </div>
                 </div>
                 <button className={styles.addButton} onClick={handleCreate}>Create</button>
