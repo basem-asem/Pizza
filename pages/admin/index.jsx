@@ -3,6 +3,7 @@ import styles from "../../styles/Admin.module.css";
 import Image from 'next/image';
 import axios from 'axios';
 
+
 const Index = ({orders, products}) => {
     const [pizzaList, setPizzaList] = useState(products)
     const [orderList, setOrderList] = useState(orders)
@@ -51,7 +52,7 @@ const Index = ({orders, products}) => {
                             </td>
                             <td>{product._id.slice(0,5)}...</td>
                             <td>{product.title}</td>
-                            <td>{product.prices}</td>
+                            <td>{product.prices.map(price=> `${price}, `)}</td>
                             <td>
                                 <button className={styles.button}>Edit</button>
                                 <button className={styles.button} onClick={()=>{handleDelete(product._id)}}>Delete</button>
@@ -90,6 +91,7 @@ const Index = ({orders, products}) => {
                     </tbody>
                 </table>
             </div>
+            
         </div>
     );
 };

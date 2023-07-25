@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 
 const Featured = () => {
     const images = [
-        "/img/featured4.jpg",
-        "/img/featured3.jpg",
-        "/img/featured.JFIF",
+        "/img/featured1.jpg",
+        "/img/featured2.jpg",
+        "/img/featured5.jpg",
     ];
     const [slider, setSlider] = useState(0)
     const handleSlider = (direction) => {

@@ -7,6 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        pulseOnce: {
+          '0%': { transform: 'translateY(0)', opacity: '0' },
+          '50%': { transform: 'translateY(-20%)', opacity: '0.5' },
+          '100%': { transform: 'translateY(0)', opacity: '1'  },
+        }
+      },
+      animation: {
+        'pulseOnce': 'pulseOnce 1s'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
