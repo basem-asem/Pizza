@@ -27,9 +27,9 @@ const Footer = () => {
         <div className={styles.card}>
           <h1 className="title md:text-lg text-[#b7903c] uppercase text-2xl font-bold">Working hours</h1>
           <p className={styles.text}>
-            Monday until friday<br/> 9:00 - 22:00
+            Monday until Friday<br/> 9:00 - 22:00
           </p><p className={styles.text}>
-            saturday - sunday <br/> 12:00 - 24:00
+            Saturday - Sunday <br/> 12:00 - 24:00
           </p>
         </div>
       </div>

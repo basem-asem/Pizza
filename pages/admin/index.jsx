@@ -7,7 +7,7 @@ import axios from 'axios';
 const Index = ({orders, products}) => {
     const [pizzaList, setPizzaList] = useState(products)
     const [orderList, setOrderList] = useState(orders)
-    const status = ["preparing", "on the way", "delevered"]
+    const status = ["preparing", "on the way", "delivered"]
 
     const handleDelete = async (id) =>{
         try{
