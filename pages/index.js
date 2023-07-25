@@ -31,7 +31,7 @@ export async function getServerSideProps(ctx) {
   }
 
   try {
-    const res = await axios.get("http://localhost:3000/api/products");
+    const res = await axios.get("https://alex-pizza.vercel.app/api/products");
     return {
       props: {
         pizzaList: res.data,
@@ -42,7 +42,7 @@ export async function getServerSideProps(ctx) {
     console.error("Error fetching data:", error.message);
     return {
       props: {
-        pizzaList: [], // Return an empty list or suitable fallback data in case of an error.
+        pizzaList: [],
         admin,
       },
     };
