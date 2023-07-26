@@ -26,6 +26,7 @@ const Login = () => {
                 <input type="text" placeholder='usename' className={styles.input} onChange={(e)=>setUsername(e.target.value)} />
 
                 <input type="password" placeholder='password' className={styles.input} onChange={(e)=>setPassword(e.target.value)} />
+                
                 <button className={styles.button} onClick={handleClick}>Sign In</button>
                 {error && <span className={styles.error}>Wrong Credentials!</span>}
             </div>

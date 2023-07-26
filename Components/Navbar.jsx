@@ -26,8 +26,12 @@ const Navbar = () => {
           <li className={styles.listItem}>Menu</li>
           <Image src="/img/logo.png" alt=""  width="160" height="69"/>
           <li className={styles.listItem}>Events</li>
+          <Link href="https://myblog-basem-asem.vercel.app/">
           <li className={styles.listItem}>Blog</li>
+          </Link>
+          <Link href="/contact">
           <li className={styles.listItem}>Contact</li>
+          </Link>
         </ul>
       </div>
       {openList && 
