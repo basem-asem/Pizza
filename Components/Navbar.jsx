@@ -24,7 +24,9 @@ const Navbar = () => {
           </Link>
           <li className={styles.listItem}>Products</li>
           <li className={styles.listItem}>Menu</li>
+          <Link href="/">
           <Image src="/img/logo.png" alt=""  width="160" height="69"/>
+          </Link> 
           <li className={styles.listItem}>Events</li>
           <Link href="https://myblog-basem-asem.vercel.app/">
           <li className={styles.listItem}>Blog</li>
