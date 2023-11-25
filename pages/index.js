@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Featured from "@/Components/Featured";
 import PizzaList from "@/Components/PizzaList";
 import AddButton from "@/Components/AddButton";
+import Add from "@/Components/Add";
 import Head from "next/head";
 import axios from "axios";
 
