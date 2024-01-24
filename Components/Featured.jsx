@@ -16,9 +16,12 @@ const Featured = () => {
             setSlider(slider !== 2 ? slider+1 : 0)
         }
     }
+    setTimeout(() => {
+        setSlider(slider < 2 ? slider+1 : slider-2)
+    }, 4000);
     return (
         <div className='slider bg-red-500 md:h-[calc(100vh-100px)] overflow-hidden h-[50vh] relative'>
-            <div className={`wrapper w-[300vw] h-full flex transition-all duration-1000 `} style={{transform: `translateX(${-100 * slider}vw)`}}>
+            <div className={`wrapper w-[300vw] h-full flex transition-all ease-out duration-1000 `} style={{transform: `translateX(${-100 * slider}vw)`}}>
                 {images.map((image, i) => (
                 <div className="imagecontainer w-[100vw] h-full relative" key={i} >
                     <Image src={image} alt="" layout='fill' />

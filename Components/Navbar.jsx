@@ -9,13 +9,15 @@ const Navbar = () => {
   const [openList, setOpenList] = useState(false);
   return (
     <div className="navbar lg:px-11 h-24 bg-red-500 flex items-center justify-center sticky z-50 top-0 px-3 gap-1">
-      <div className={styles.item}>
+      <div className={styles.item}> 
+        <a href="tel:+201226290384">
         <div className="texts text-white flex flex-col justify-center items-center gap-2">
         <div className="callButton bg-white rounded-full p-3 w-12 h-12 mx-5">
           <Image src="/img/telephone.png" alt="" width='32' height="32"/>
         </div>
           <div className=" text-xs font-medium">ORDER NOW!</div>
         </div>
+        </a>
       </div>
       <div className={`${styles.item}`}>
         <ul className="flex items-center justify-center text-white p-0">
